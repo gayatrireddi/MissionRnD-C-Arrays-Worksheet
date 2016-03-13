@@ -24,7 +24,6 @@ struct student {
 struct student ** topKStudents(struct student *students, int len, int K) {
 	int i, j, k;
 	struct student t;
-	student s[1000];
 	for (i = 0; i < (len - 1); i++)
 	{
 		for (j = 0; j < len - i - 1; j++)
@@ -37,9 +36,10 @@ struct student ** topKStudents(struct student *students, int len, int K) {
 			}
 		}
 	}
-	for (i = 0; i < (k+1); i++){
-	
-	
+	for (i = 0; i < (k + 1); i++){
+		return students[i]->score;
+		return students[i]->name;
 	}
+
 	return NULL;
 }
